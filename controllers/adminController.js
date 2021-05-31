@@ -1,6 +1,6 @@
-const Post = require('../models/Post');
-const Comment = require('../models/Comment');
-const Admin = require('../models/Admin');
+const Post = require('../models/post');
+const Comment = require('../models/comment');
+const Admin = require('../models/admin');
 const { body,validationResult } = require("express-validator");
 
 exports.show_blog_list = (req, res, next) => {
