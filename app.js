@@ -49,6 +49,9 @@ function verifyToken(req, res, next) {
 	}
 }
 
+const host = '0.0.0.0';
+const port = process.env.PORT || 3000;
 
-const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => console.log('App running'));
+app.listen(port, host, function() {
+  console.log("Server started.......");
+})
