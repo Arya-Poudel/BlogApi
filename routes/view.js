@@ -2,8 +2,8 @@ const express = require('express');
 const router = express.Router();
 const view_controller = require('../controllers/viewController');
 
-
-
+//show homepage
+router.get('/blogs', view_controller.blog_home);
 //show all blogs
 router.get('/blogs', view_controller.blog_list );
 //show detail of a blog

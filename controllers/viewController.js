@@ -2,6 +2,11 @@ const Post = require('../models/post');
 const Comment = require('../models/comment');
 const { body,validationResult } = require("express-validator");
 
+exports.blog_home = (req, res, next) => {
+	res.send('This is the  rest api for the blogapp. Viewers can see the blog and add comments. Admin needs to login to get privileges.')
+};
+
+
 exports.blog_list = (req, res, next) => {
 	Post.find({isPublished: true}, 'title text truncated_text')
 	.exec((err, posts) => {
