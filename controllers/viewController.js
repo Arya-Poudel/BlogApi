@@ -26,6 +26,10 @@ exports.blog_detail = (req, res, next) => {
 			res.sendStatus(404); 
 			return; 
 		}
+		if (blogDetail.isPublished === false) {
+			res.sendStatus(404); 
+			return; 
+		}
 		res.status(200).json(blogDetail)
 	})
 };
